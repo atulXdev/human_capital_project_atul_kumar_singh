@@ -20,4 +20,10 @@ router.patch('/prices/:priceId', updatePriceValidator, validate, adminController
 router.get('/dashboard', adminController.getDashboard);
 router.get('/stats', adminController.getStats);
 
+// User Management CRUD
+router.get('/users', adminController.getAllUsers);
+router.post('/users', adminController.createUser);
+router.patch('/users/:userId', adminController.updateUser);
+router.delete('/users/:userId', adminController.deleteUser);
+
 module.exports = router;
